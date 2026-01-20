@@ -32,7 +32,7 @@ export const HeroSection = () => {
             className="text-primary uppercase tracking-[0.4em] text-sm md:text-base font-medium opacity-0 animate-fade-up"
             style={{ animationDelay: '200ms', animationFillMode: 'forwards' }}
           >
-            Premium Barbershop seit 2010
+            Premium Barbershop mit Tradition und Stil
           </p>
 
           {/* Main Headline */}
