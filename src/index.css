@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonts werden jetzt über index.html mit preload geladen - nur benötigte Weights */
+
+@layer base {
+  :root {
+    /* Barbershop Color Palette - Warm Gold & Deep Charcoal */
+    --background: 0 0% 5%;
+    --foreground: 45 20% 95%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 45 20% 95%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 45 20% 95%;
+
+    /* Rich Gold Primary */
+    --primary: 42 65% 55%;
+    --primary-foreground: 0 0% 5%;
+
+    /* Warm Cream Secondary */
+    --secondary: 40 30% 15%;
+    --secondary-foreground: 45 20% 90%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 45 10% 60%;
+
+    /* Copper Accent */
+    --accent: 30 60% 45%;
+    --accent-foreground: 45 20% 95%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 45 20% 95%;
+
+    --border: 40 20% 20%;
+    --input: 40 20% 15%;
+    --ring: 42 65% 55%;
+
+    --radius: 0.25rem;
+
+    /* Custom Design Tokens */
+    --gold: 42 65% 55%;
+    --gold-light: 42 70% 65%;
+    --gold-dark: 42 60% 40%;
+    --charcoal: 0 0% 8%;
+    --charcoal-light: 0 0% 12%;
+    --charcoal-dark: 0 0% 5%;
+    --cream: 45 30% 92%;
+    --copper: 30 60% 45%;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 45 20% 95%;
+    --sidebar-primary: 42 65% 55%;
+    --sidebar-primary-foreground: 0 0% 5%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 45 20% 95%;
+    --sidebar-border: 40 20% 20%;
+    --sidebar-ring: 42 65% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: "Raleway", "Helvetica", "Arial", sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", "Georgia", serif;
+  }
+}
+
+@layer components {
+  /* Gold Underline Animation */
+  .gold-underline {
+    @apply relative inline-block;
+  }
+  
+  .gold-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-primary scale-x-0 origin-right transition-transform duration-300;
+  }
+  
+  .gold-underline:hover::after {
+    @apply scale-x-100 origin-left;
+  }
+
+  /* Section Divider */
+  .section-divider {
+    @apply w-20 h-0.5 mx-auto;
+    background: linear-gradient(90deg, transparent, hsl(var(--primary)), transparent);
+  }
+
+  /* Glass Effect */
+  .glass {
+    background: hsla(0, 0%, 8%, 0.8);
+    backdrop-filter: blur(12px);
+    @apply border border-border/50;
+  }
+
+  /* Text Gradient */
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--copper)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Keyframes */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+

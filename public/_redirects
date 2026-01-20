@@ -1,0 +1,7 @@
+# 301 Redirects: Alte englische URLs auf neue deutsche URLs
+/gallery     /galerie       301
+/prices      /preise        301
+/contact     /kontakt       301
+
+# SPA Fallback: Alle anderen Routen an index.html
+/*    /index.html   200
