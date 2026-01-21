@@ -6,7 +6,7 @@ const galleryImages = [
   {
     id: 1,
     src: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&h=400&fit=crop',
-    alt: 'Professioneller Herrenhaarschnitt mit Schere und Kamm im Barbershop Wien',
+    alt: 'Professioneller Herrenhaarschnitt mit Schere und Kamm im Barbershop Nürnberg',
     category: 'Haarschnitt',
   },
   {
