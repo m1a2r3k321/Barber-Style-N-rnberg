@@ -51,7 +51,7 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-semibold text-foreground mb-1">Adresse</h4>
                   <p className="text-muted-foreground">
-                    Musterstraße 123, 10115 Berlin
+                   Königstraße 73, 90402 Nürnberg
                   </p>
                 </div>
               </div>
