@@ -78,7 +78,7 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-semibold text-foreground mb-1">Öffnungszeiten</h4>
                   <p className="text-muted-foreground">
-                    Mo - Sa: 09:00-20:00 Uhr|So: geschlossen
+                    Mo - Sa: 09:00-20:00 Uhr | So: geschlossen
                   </p>
                 </div>
               </div>
